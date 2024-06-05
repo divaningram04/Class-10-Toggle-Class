@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Class Example</title>
+<style>
+  .highlighted {
+    background-color: yellow;
+  }
+</style>
+</head>
+<body>
+
+<div id="target" onclick="toggleClass('target', 'highlighted')">Click me to toggle class</div>
+
+<script>
+function toggleClass(elementId, className) {
+  var element = document.getElementById(elementId);
+  if (element.classList.contains(className)) {
+    element.classList.remove(className);
+  } else {
+    element.classList.add(className);
+  }
+}
+</script>
+
+</body>
+</html>
